@@ -9,13 +9,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image/image-detail.component';
 import { ImageService } from './image/shared/image.service';
+import { ImageFilterPipe } from './image/shared/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     GalleryComponent,
-    ImageDetailComponent
+    ImageDetailComponent,
+    ImageFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,7 @@ import { ImageService } from './image/shared/image.service';
     HttpModule,
     AlertModule.forRoot()
   ],
-  providers: [ImageService],
+  providers: [ImageService, ImageFilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
