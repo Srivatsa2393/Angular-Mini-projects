@@ -10,6 +10,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image/image-detail.component';
 import { ImageService } from './image/shared/image.service';
 import { ImageFilterPipe } from './image/shared/filter.pipe';
+import { appRoutes } from '../routes';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { ImageFilterPipe } from './image/shared/filter.pipe';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ImageService, ImageFilterPipe],
   bootstrap: [AppComponent]
