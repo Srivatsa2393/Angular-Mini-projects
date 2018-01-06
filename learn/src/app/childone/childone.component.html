@@ -1,0 +1,23 @@
+<h3>{{ childTitle }}</h3>
+<b>{{ cityMessage }}</b>
+
+<ul>
+  <li *ngFor="let name of cityArray">
+    {{ name }}
+  </li>
+</ul>
+
+<b>{{studentAddMsg}}</b>
+
+<div>
+  FirstName: <input (input)="student.fname=$event.target.value"> <br>
+  Last Name:<input (input)="student.lname=$event.target.value" /> <br>
+  <button (click)="addStudent()">Add Student</button>
+</div>
+
+<b>{{message}}</b>
+
+<div>
+  Message :<input (input)="msg=$event.target.value" />
+  <br/> <button (click)="sendMsg()">Send</button>
+</div>

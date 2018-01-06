@@ -1,0 +1,21 @@
+<h1>{{ parentTitle }}</h1>
+
+<app-childone
+  [cityMessage]="cityMsg"
+  [cityArray]="cityArray"
+  [studentAddMsg]="stdAddMsg"
+  (addStudentEvent)="saveData($event)"
+  (sendMsgEvent)="printMsg($event)"
+>
+</app-childone>
+  <p>Name: {{ stdFullName }}</p>
+  <p>Message: {{ msg }}</p>
+<app-childtwo
+  [studentMsg]="stdMsg"
+  [stdLeader]="stdLeaderObj"
+  (addNumberEvent)="printSum($event)"
+>
+
+</app-childtwo>
+
+<p>Sum: {{sum}}</p>
