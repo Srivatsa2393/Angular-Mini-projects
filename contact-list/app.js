@@ -12,6 +12,14 @@ const route = require('./routes/route');
 //define port no
 const port = 3000;
 
+//adding middleware
+app.use(cors());
+app.use(bodyParser.json())
+
+//static files
+app.use(express.static(path.join(__dirname, 'public')));
+
+//routes
 app.use('/api', route);
 
 //testing server
