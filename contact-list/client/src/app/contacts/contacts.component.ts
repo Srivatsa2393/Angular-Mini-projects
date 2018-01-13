@@ -24,7 +24,6 @@ export class ContactsComponent implements OnInit {
         (contacts: any) => {
           this.contacts = contacts;
         }
-      )
+      );
+        }
   }
-
-}
