@@ -36,3 +36,22 @@ function saveBookmark() {
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
 }
+
+//fetch bookmarks
+function fetchBookmarks() {
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+    //console.log(bookmarks);
+    var bookmarksResults = document.getElementById('bookmarksResults');
+    //build output
+    bookmarksResults.innerHTML = '';
+    for(var i = 0; i < bookmarks.length; i++){
+        var name = bookmarks[i].name;
+        var url = bookmarks[i].url;
+
+        bookmarksResults.innerHTML += '<div class="well">'+
+                                        '<h3>'+name+
+                                        '<a class="btn btn-default" target="_blank" href="'+url+'">Visit</a>'
+                                        '</h3>'+
+                                        '</div>';
+    }
+}
