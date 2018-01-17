@@ -14,6 +14,19 @@ function saveBookmark() {
     var siteUrl = document.getElementById('siteUrl').value;
     //console.log(siteUrl.value);
 
+    if(!siteName || !siteUrl) {
+        alert('Please fill in the form');
+        return false;
+    }
+
+    var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+    var regex = new RegExp(expression);
+
+    if(!siteUrl.match(regex)){
+        alert('Please use the valid url');
+        return false;
+    }
+
     var bookmark = {
         name: siteName,
         url: siteUrl
@@ -35,6 +48,10 @@ function saveBookmark() {
         bookmarks.push(bookmark);
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
+
+    fetchBookmarks();
+
+    document.getElementById('myForm').reset();
 }
 
 //fetch bookmarks
@@ -50,8 +67,24 @@ function fetchBookmarks() {
 
         bookmarksResults.innerHTML += '<div class="well">'+
                                         '<h3>'+name+
-                                        '<a class="btn btn-default" target="_blank" href="'+url+'">Visit</a>'
+                                        '<a class="btn btn-default" target="_blank" href="'+url+'">Visit</a> ' +
+                                        '<a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Delete</a> '
                                         '</h3>'+
                                         '</div>';
     }
+}
+
+
+function deleteBookmark(url) {
+    //console.log(url);
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+
+    for(var i = 0; i < bookmarks.length; i++){
+        if(bookmarks[i].url == url){
+            bookmarks.splice(i, 1);
+        }
+    }
+
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    fetchBookmarks();
 }
