@@ -2,8 +2,13 @@ var express = require('express');
 
 var app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hello Srivatsa');
+var posts = [
+    {message: 'Hello'},
+    {message: 'hi'}
+];
+
+app.get('/posts', (req, res) => {
+    res.send(posts);
 })
 
 app.listen(3000);
