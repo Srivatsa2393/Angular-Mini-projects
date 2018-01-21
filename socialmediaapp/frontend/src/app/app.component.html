@@ -1,4 +1,7 @@
 <button class="btn btn-primary">Click Me</button>
-<div class="container" *ngFor="let message of apiService.messages">
-  <h1>{{message.message}}</h1>
+
+<div class="container">
+  <div class="jumbotron" *ngFor="let message of apiService.messages">
+      {{message.message}}
+  </div>
 </div>
