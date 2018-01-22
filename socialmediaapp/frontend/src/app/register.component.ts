@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   })
 
 export class RegisterComponent {
+    registerData = {}
 
+    post() {
+        console.log(this.registerData);
+    }
 }
