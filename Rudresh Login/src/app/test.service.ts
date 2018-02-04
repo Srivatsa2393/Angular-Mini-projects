@@ -6,7 +6,6 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class TestService {
   //private url = "https://randomuser.me/api/?format=xml";
   private url = "../assets/system.xml";
-  //private url = `window.location.host/system.xml`
 
   constructor(private http:HttpClient) {
     
