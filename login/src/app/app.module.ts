@@ -14,7 +14,7 @@ import { DeviceInfoComponent } from './device-info/device-info.component';
 import { XmlParserService } from './xmlParser.service';
 
 const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
   { path: 'deviceInfo', component: DeviceInfoComponent }
 ] 
 
