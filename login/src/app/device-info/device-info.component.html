@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <h1>Device Information</h1>
+  </div>
+  <div class="row">
+    <div><span><b>Name</b></span> - {{ data== undefined ? "": data.sysname }}</div>
+    
+    <div><span><b>IP Address</b></span> - {{ data== undefined ? "": data.net.ip.addr }}</div>
+    
+    <div><span><b>HTML Version</b></span> - {{ data== undefined ? "": data.property.name }}</div>
+    
+    <div><span><b>Version Value</b></span> -  {{ data== undefined ? "": data.property.value }}</div>
+  </div>
+</div>
+
