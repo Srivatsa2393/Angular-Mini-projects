@@ -1,0 +1,52 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">CMS HTML Pages</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a [routerLink]="['/']">Home</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/']">Device Info</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/']">Modbus Info</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/']">Device Details</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <span class="glyphicon glyphicon-home"></span>
+      <span style="padding:20px;">{{ data== undefined ? "" : data.system_cfg.sysname }}</span>
+      <span>{{ data== undefined ? "": data.system_cfg.net.ip.addr }}</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <!-- <h3>Device Information</h3> -->
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Device Information
+      </div>
+      <div class="panel-body">
+        <p>BSP Version - 2.0/20</p>
+        <p>Subnet - {{ data== undefined ? "": data.system_cfg.net.ip.subnet }}</p>
+        <p>Gate - {{ data== undefined ? "": data.system_cfg.net.ip.gate }}</p>
+        <p>system_cfg - {{ data== undefined ? "": data.system_cfg.$.version }}</p>
+        <p>HTML Version - {{ data== undefined ? "": data.system_cfg.property.$.value }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->

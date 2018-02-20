@@ -1,0 +1,9 @@
+<!-- <div *ngFor="let data of datas | keyobject">
+  {{data.user.results.cell}}
+</div> -->
+
+<!-- {{datas.user.results.cell}} -->
+
+<div *ngFor="let data of datas; let i = index;">
+  <span>{{keys[i]}} : {{data}}</span>
+</div>

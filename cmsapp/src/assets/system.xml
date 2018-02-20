@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<system_cfg version="1.0" target="vibguard">
+	<sysname>Test_Arduino_Vib</sysname>
+
+	<property name="html_version" value="1.8"/>
+
+	<net adaptor="eth" dhcp="false">
+		<ip type="v4">
+			<addr>172.17.73.19</addr>
+			<subnet>255.255.0.0</subnet>
+			<gate>0.0.0.0</gate>
+			<dns id="1">0.0.0.0</dns>
+			<dns id="2">0.0.0.0</dns>
+		</ip>
+	</net>
+
+	<timezone name="Europe/Ber" offs="3600" dst="on"/>
+
+	<service name="http" port="80" enable="true">
+		<timeout>120</timeout>
+	</service>
+
+	<service name="modbtcp" port="502" enable="true">
+		<timeout>60</timeout>
+		<mapping addr_offs="0" start="0" num="0"/>
+	</service>
+
+	<modbrtu_service mode="slave" slave="1"  enable="false">
+		<com_port com_port="com1" baud="9600" parity="none"/>
+	</modbrtu_service>
+</system_cfg>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
+import { config } from '../config';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +23,7 @@ export class LoginComponent implements OnInit {
 
     console.log(username, password);
 
-    if(username == 'user3' && password == 'user3'){
+    if(username == config.username && password == config.password){
       this.loginUser.setUserLoggedIn();
       this.router.navigate(['device']);
     }
