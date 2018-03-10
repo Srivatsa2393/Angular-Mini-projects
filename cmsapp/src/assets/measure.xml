@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<measure_cfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.pruftechnik.com/cm" version="1.1.0" target="vibguard" sysname="my Vibguard" sysid="1454419336">
+    <omt ws_id="1408474087" project_id="1787160257" route_id="1848097491" route_ctime="2018-01-15T08:50:27Z"/>
+    <sensor id="1" name="VIB 6.127" type="cld" quant="acc">
+        <func_id src="pt" id="VIB 6.127"/>
+        <poly c0="0.0" c1="0.1869159"/>
+        <frequency fmin="0.3" fmax="10000.0" fres="17000.0"/>
+    </sensor>
+    <sensor id="2" name="VIB 6.102 R" type="cld" quant="acc">
+        <func_id src="pt" id="VIB 6.102 R"/>
+        <poly c0="0.0" c1="1.0"/>
+        <frequency fmin="1.0" fmax="20000.0" fres="36000.0"/>
+    </sensor>
+    <sensor id="3" name="Volt" type="volt" quant="volt">
+        <func_id src="intern" id="intern volt"/>
+        <poly c0="0.0" c1="1.0"/>
+    </sensor>
+    <sensor id="4" name="Temperature" type="volt" quant="temp">
+        <func_id src="intern" id="intern temp"/>
+        <poly c0="0.0" c1="1.0"/>
+    </sensor>
+    <sensor id="5" name="Load" type="volt" quant="udef">
+        <func_id src="intern" id="intern load"/>
+        <poly c0="0.0" c1="1.0"/>
+        <user_quant omt_id="1009" label="Load" unit="%" prec="0"/>
+    </sensor>
+    <channel id="-624916065" sensor_ref="1" hw_addr="A1" amp="0" sensor_check="true"/>
+    <channel id="-2034091566" sensor_ref="2" hw_addr="A2" amp="0" sensor_check="true"/>
+    <channel id="-261011686" sensor_ref="1" hw_addr="A3" amp="0" sensor_check="true"/>
+    <channel id="1018" sensor_ref="3" hw_addr="A101" amp="0" sensor_check="false"/>
+    <channel id="1020" sensor_ref="3" hw_addr="A102" amp="0" sensor_check="false"/>
+    <channel id="1022" sensor_ref="3" hw_addr="A103" amp="0" sensor_check="false"/>
+    <channel id="1024" sensor_ref="3" hw_addr="A104" amp="0" sensor_check="false"/>
+    <channel id="1026" sensor_ref="3" hw_addr="A105" amp="0" sensor_check="false"/>
+    <channel id="1028" sensor_ref="3" hw_addr="A106" amp="0" sensor_check="false"/>
+    <channel id="1030" sensor_ref="3" hw_addr="A107" amp="0" sensor_check="false"/>
+    <channel id="1032" sensor_ref="3" hw_addr="A108" amp="0" sensor_check="false"/>
+    <channel id="1034" sensor_ref="3" hw_addr="A109" amp="0" sensor_check="false"/>
+    <channel id="1036" sensor_ref="3" hw_addr="A110" amp="0" sensor_check="false"/>
+    <channel id="1038" sensor_ref="3" hw_addr="A111" amp="0" sensor_check="false"/>
+    <channel id="1040" sensor_ref="3" hw_addr="A112" amp="0" sensor_check="false"/>
+    <channel id="1042" sensor_ref="3" hw_addr="A113" amp="0" sensor_check="false"/>
+    <channel id="1044" sensor_ref="3" hw_addr="A114" amp="0" sensor_check="false"/>
+    <channel id="1046" sensor_ref="3" hw_addr="A115" amp="0" sensor_check="false"/>
+    <channel id="1048" sensor_ref="3" hw_addr="A116" amp="0" sensor_check="false"/>
+    <channel id="1050" sensor_ref="3" hw_addr="A117" amp="0" sensor_check="false"/>
+    <channel id="1052" sensor_ref="3" hw_addr="A118" amp="0" sensor_check="false"/>
+    <channel id="1054" sensor_ref="3" hw_addr="A119" amp="0" sensor_check="false"/>
+    <channel id="1056" sensor_ref="3" hw_addr="A120" amp="0" sensor_check="false"/>
+    <channel id="1058" sensor_ref="3" hw_addr="A121" amp="0" sensor_check="false"/>
+    <channel id="1060" sensor_ref="3" hw_addr="A122" amp="0" sensor_check="false"/>
+    <channel id="1062" sensor_ref="4" hw_addr="A123" amp="0" sensor_check="false"/>
+    <channel id="1064" sensor_ref="3" hw_addr="A124" amp="0" sensor_check="false"/>
+    <channel id="1066" sensor_ref="3" hw_addr="A125" amp="0" sensor_check="false"/>
+    <channel id="1068" sensor_ref="3" hw_addr="A126" amp="0" sensor_check="false"/>
+    <channel id="1070" sensor_ref="3" hw_addr="A127" amp="0" sensor_check="false"/>
+    <channel id="1072" sensor_ref="5" hw_addr="A128" amp="0" sensor_check="false"/>
+    <digital id="-536257837" type="out" hw_addr="B4" label="B4 System OK"/>
+    <digital id="-486186551" type="out" hw_addr="B3" label="B3 Global Alarm"/>
+    <digital id="205764287" type="out" hw_addr="B1" label="B1"/>
+    <digital id="211168124" type="out" hw_addr="B2" label="B2"/>
+    <task task_id="474582621" name="A1/VGD Ov Acc 10 - 5000 Hz">
+        <meas_setup xsi:type="MeasureSetupVibguard" kind="sum">
+            <single quant="acc" type="rms" name="VGD Ov Acc 10 - 5000 Hz" res_id="2">
+                <frequency min="10.0" max="5000.0"/>
+                <delta_list>
+                    <delta delta="0.2"/>
+                </delta_list>
+            </single>
+            <single quant="acc" type="true0p" name="VGD Ov Acc 10 - 5000 Hz" res_id="5">
+                <frequency min="10.0" max="5000.0"/>
+            </single>
+            <single quant="acc" type="truepp" name="VGD Ov Acc 10 - 5000 Hz" res_id="6">
+                <frequency min="10.0" max="5000.0"/>
+            </single>
+        </meas_setup>
+    </task>
+    <task task_id="-160137714" name="A1/VGD Ov Acc 10 - 10000 Hz">
+        <meas_setup xsi:type="MeasureSetupVibguard" kind="sum">
+            <single quant="acc" type="rms" name="VGD Ov Acc 10 - 10000 Hz" res_id="2">
+                <frequency min="10.0" max="10000.0"/>
+                <delta_list>
+                    <delta delta="0.2"/>
+                </delta_list>
+            </single>
+            <single quant="acc" type="true0p" name="VGD Ov Acc 10 - 10000 Hz" res_id="5">
+                <frequency min="10.0" max="10000.0"/>
+            </single>
+            <single quant="acc" type="truepp" name="VGD Ov Acc 10 - 10000 Hz" res_id="6">
+                <frequency min="10.0" max="10000.0"/>
+            </single>
+        </meas_setup>
+    </task>
+    <task task_id="-1014963321" name="A2/VGD Overall Velocity 1 - 1000 Hz">
+        <meas_setup xsi:type="MeasureSetupVibguard" kind="sum">
+            <single quant="vel" type="rms" name="VGD Overall Velocity 1 - 1000 Hz" res_id="2">
+                <frequency min="1.0" max="1000.0"/>
+                <delta_list>
+                    <delta delta="0.2"/>
+                </delta_list>
+            </single>
+            <single quant="vel" type="true0p" name="VGD Overall Velocity 1 - 1000 Hz" res_id="5">
+                <frequency min="1.0" max="1000.0"/>
+            </single>
+        </meas_setup>
+    </task>
+    <task task_id="2680175" name="A3/VGD Ov Acc 10 - 10000 Hz">
+        <meas_setup xsi:type="MeasureSetupVibguard" kind="sum">
+            <single quant="acc" type="rms" name="VGD Ov Acc 10 - 10000 Hz" res_id="2">
+                <frequency min="10.0" max="10000.0"/>
+                <delta_list>
+                    <delta delta="0.2"/>
+                </delta_list>
+            </single>
+            <single quant="acc" type="true0p" name="VGD Ov Acc 10 - 10000 Hz" res_id="5">
+                <frequency min="10.0" max="10000.0"/>
+            </single>
+            <single quant="acc" type="truepp" name="VGD Ov Acc 10 - 10000 Hz" res_id="6">
+                <frequency min="10.0" max="10000.0"/>
+            </single>
+        </meas_setup>
+    </task>
+    <task task_id="1010" name="DC Value">
+        <meas_setup xsi:type="MeasureSetupVibguard" kind="single">
+            <single quant="volt" type="mean" res_id="1011">
+                <average/>
+                <frequency min="0.0" max="3.4028233E38"/>
+                <persistent value="never"/>
+            </single>
+        </meas_setup>
+    </task>
+    <task task_id="1012" name="Temp Value">
+        <meas_setup xsi:type="MeasureSetupVibguard" kind="single">
+            <single quant="temp" type="mean" res_id="1013">
+                <average/>
+                <frequency min="0.0" max="3.4028233E38"/>
+                <persistent value="never"/>
+            </single>
+        </meas_setup>
+    </task>
+    <task task_id="1014" name="Percent Value">
+        <meas_setup xsi:type="MeasureSetupVibguard" kind="single">
+            <single quant="udef" type="mean" res_id="1015">
+                <average/>
+                <frequency min="0.0" max="3.4028233E38"/>
+                <persistent value="never"/>
+            </single>
+        </meas_setup>
+    </task>
+    <ptroute rt_nodes="63" enable="true">
+        <node channel_ref="-624916065" node_id="-624916065" type="point" name="A1"/>
+        <node node_id="474582621" type="job" name="A1/VGD Ov Acc 10 - 5000 Hz" parent="-624916065">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="474582621"/>
+            <alcon count="1" rate="100"/>
+        </node>
+        <node node_id="-160137714" type="job" name="A1/VGD Ov Acc 10 - 10000 Hz" parent="-624916065">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="-160137714"/>
+            <alcon count="1" rate="100"/>
+        </node>
+        <node channel_ref="-2034091566" node_id="-2034091566" type="point" name="A2"/>
+        <node node_id="-1014963321" type="job" name="A2/VGD Overall Velocity 1 - 1000 Hz" parent="-2034091566">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="-1014963321"/>
+            <alcon count="1" rate="100"/>
+        </node>
+        <node channel_ref="-261011686" node_id="-261011686" type="point" name="A3"/>
+        <node node_id="2680175" type="job" name="A3/VGD Ov Acc 10 - 10000 Hz" parent="-261011686">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="2680175"/>
+            <alcon count="1" rate="100"/>
+        </node>
+        <node channel_ref="1018" node_id="1018" type="point" name="CH_101"/>
+        <node node_id="1019" type="job" name="CH_101_Job" parent="1018">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1020" node_id="1020" type="point" name="CH_102"/>
+        <node node_id="1021" type="job" name="CH_102_Job" parent="1020">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1022" node_id="1022" type="point" name="CH_103"/>
+        <node node_id="1023" type="job" name="CH_103_Job" parent="1022">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1024" node_id="1024" type="point" name="CH_104"/>
+        <node node_id="1025" type="job" name="CH_104_Job" parent="1024">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1026" node_id="1026" type="point" name="CH_105"/>
+        <node node_id="1027" type="job" name="CH_105_Job" parent="1026">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1028" node_id="1028" type="point" name="CH_106"/>
+        <node node_id="1029" type="job" name="CH_106_Job" parent="1028">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1030" node_id="1030" type="point" name="CH_107"/>
+        <node node_id="1031" type="job" name="CH_107_Job" parent="1030">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1032" node_id="1032" type="point" name="CH_108"/>
+        <node node_id="1033" type="job" name="CH_108_Job" parent="1032">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1034" node_id="1034" type="point" name="CH_109"/>
+        <node node_id="1035" type="job" name="CH_109_Job" parent="1034">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1036" node_id="1036" type="point" name="CH_110"/>
+        <node node_id="1037" type="job" name="CH_110_Job" parent="1036">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1038" node_id="1038" type="point" name="CH_111"/>
+        <node node_id="1039" type="job" name="CH_111_Job" parent="1038">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1040" node_id="1040" type="point" name="CH_112"/>
+        <node node_id="1041" type="job" name="CH_112_Job" parent="1040">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1042" node_id="1042" type="point" name="CH_113"/>
+        <node node_id="1043" type="job" name="CH_113_Job" parent="1042">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1044" node_id="1044" type="point" name="CH_114"/>
+        <node node_id="1045" type="job" name="CH_114_Job" parent="1044">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1046" node_id="1046" type="point" name="CH_115"/>
+        <node node_id="1047" type="job" name="CH_115_Job" parent="1046">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1048" node_id="1048" type="point" name="CH_116"/>
+        <node node_id="1049" type="job" name="CH_116_Job" parent="1048">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1050" node_id="1050" type="point" name="CH_117"/>
+        <node node_id="1051" type="job" name="CH_117_Job" parent="1050">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1052" node_id="1052" type="point" name="CH_118"/>
+        <node node_id="1053" type="job" name="CH_118_Job" parent="1052">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1054" node_id="1054" type="point" name="CH_119"/>
+        <node node_id="1055" type="job" name="CH_119_Job" parent="1054">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1056" node_id="1056" type="point" name="CH_120"/>
+        <node node_id="1057" type="job" name="CH_120_Job" parent="1056">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1058" node_id="1058" type="point" name="KP_101"/>
+        <node node_id="1059" type="job" name="KP_101_Job" parent="1058">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1060" node_id="1060" type="point" name="KP_102"/>
+        <node node_id="1061" type="job" name="KP_102_Job" parent="1060">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1062" node_id="1062" type="point" name="TEMP_123"/>
+        <node node_id="1063" type="job" name="TEMP_123_Job" parent="1062">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1012"/>
+        </node>
+        <node channel_ref="1064" node_id="1064" type="point" name="BATTERY_V_124"/>
+        <node node_id="1065" type="job" name="BATTERY_V_124_Job" parent="1064">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1066" node_id="1066" type="point" name="24V_125"/>
+        <node node_id="1067" type="job" name="24V_125_Job" parent="1066">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1068" node_id="1068" type="point" name="3.3_V_126"/>
+        <node node_id="1069" type="job" name="3.3_V_126_Job" parent="1068">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1070" node_id="1070" type="point" name="5_V_127"/>
+        <node node_id="1071" type="job" name="5_V_127_Job" parent="1070">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1010"/>
+        </node>
+        <node channel_ref="1072" node_id="1072" type="point" name="LOAD_128"/>
+        <node node_id="1073" type="job" name="LOAD_128_Job" parent="1072">
+            <job xsi:type="VibguardJobNodeElementType" task_ref="1014"/>
+        </node>
+    </ptroute>
+    <group id="1001" type="charac" ts_id_ref="427994053" name="Overall Values 1" ch_grp="-40549872">
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="474582621"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="-160137714"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="-1014963321"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="2680175"/>
+    </group>
+    <group id="1016" type="trending" ts_id_ref="1017" name="Intern" ch_grp="0">
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1019"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1021"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1023"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1025"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1027"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1029"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1031"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1033"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1035"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1037"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1039"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1041"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1043"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1045"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1047"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1049"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1051"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1053"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1055"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1057"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1059"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1061"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1063"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1065"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1067"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1069"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1071"/>
+        <job xsi:type="MeasureGroup2JobRefElementType" id_ref="1073"/>
+    </group>
+    <trigger_setup>
+        <trigger_sources>
+            <ts_time interval="1000" ts_id="460087535" hold="false"/>
+            <ts_time start="2010-01-01T00:00:00Z" interval="5000" ts_id="1017"/>
+            <ts_conj type="or" ts_id="427994053" hold="false">
+                <trigger ts_id_ref="460087535"/>
+            </ts_conj>
+        </trigger_sources>
+        <trigger_actions/>
+    </trigger_setup>
+    <os_setup/>
+    <modbus/>
+    <km_setup/>
+    <eventrecorder max_recordings="1" interval="3600.0"/>
+</measure_cfg>

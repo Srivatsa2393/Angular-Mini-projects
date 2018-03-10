@@ -9,15 +9,26 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TransformService } from '../services/transform/transform.service';
 import { DataService } from '../services/data/data.service';
+import { FormeditComponent } from './formedit/formedit.component';
+import { DevicedetailsComponent } from './devicedetails/devicedetails.component';
+import { DeviceinfoComponent } from './deviceinfo/deviceinfo.component';
+import { ModbusComponent } from './modbus/modbus.component';
 
 const appRoutes: Routes = [
-  { path: '', component: AppComponent }
+  { path: '', component: FormeditComponent },
+  { path: 'device', component: DevicedetailsComponent },
+  { path: 'deviceInfo', component: DeviceinfoComponent },
+  { path: 'email', component: ModbusComponent }
 ];
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormeditComponent,
+    DevicedetailsComponent,
+    DeviceinfoComponent,
+    ModbusComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<!-- <nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">CMS HTML Pages</a>
@@ -8,10 +8,10 @@
         <a [routerLink]="['/']">Home</a>
       </li>
       <li routerLinkActive="active">
-        <a [routerLink]="['/']">Device Info</a>
+        <a [routerLink]="['/deviceInfo']">Device Info</a>
       </li>
       <li routerLinkActive="active">
-        <a [routerLink]="['/']">Modbus Info</a>
+        <a [routerLink]="['/email']">Modbus Info</a>
       </li>
       <li routerLinkActive="active">
         <a [routerLink]="['/']">Device Details</a>
@@ -19,6 +19,7 @@
     </ul>
   </div>
 </nav>
+
 
 <div class="container">
   <div class="row">
@@ -28,12 +29,12 @@
       <span>{{ data== undefined ? "": data.system_cfg.net.ip.addr }}</span>
     </div>
   </div>
-</div> -->
+</div>
 
 
-<!-- <div class="container"> -->
+<div class="container"> 
   <!-- <h3>Device Information</h3> -->
-  <!-- <div class="panel-group">
+  <div class="panel-group">
     <div class="panel panel-default">
       <div class="panel-heading">
         Device Information
@@ -47,8 +48,4 @@
       </div>
     </div>
   </div>
-</div> -->
-
-<router-outlet></router-outlet>
-
-<!-- <app-formedit></app-formedit> -->
+</div>

@@ -1,0 +1,54 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">CMS HTML Pages</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a [routerLink]="['/device']">Home</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/deviceInfo']">Device Info</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/email']">Modbus Info</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/']">Device Details</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <span class="glyphicon glyphicon-home"></span>
+      <span style="padding:20px;">{{ datas== undefined ? "" : datas.system_cfg.sysname }}</span>
+      <span>{{ datas== undefined ? "": datas.system_cfg.net.ip.addr }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1>Email Settings</h1>
+      </div>
+      <div class="panel-body">
+        <p>Server Address - 92.18.5.1</p>
+        <p>Server Port - {{data.email_cfg.mail.account.$.port}}</p>
+        <p>SMTP Authentication - {{data.email_cfg.mail.account.$.auth}}</p>
+        <p>POP3 Server - {{data.email_cfg.mail.account.$.srv}}</p>
+        <p>Username - {{data.email_cfg.mail.account.user}}</p>
+        <p>Password - {{data.email_cfg.mail.account.pwd}}</p>
+        <p>Sender Name - {{data.email_cfg.mail.sender.$.name}}</p>
+        <p>Sender Address - {{data.email_cfg.mail.sender.$.addr}}</p>
+        <p>Status To - telediagnose@pruftechnik.com</p>
+        <p>Status From - telediagnose@pruftechnik.com</p>
+        <p>System Mail - telediagnose@pruftechnik.com</p>
+      </div>
+    </div>
+  </div>
+</div>

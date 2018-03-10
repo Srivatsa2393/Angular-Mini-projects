@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../services/data/data.service';
-import { TransformService } from '../services/transform/transform.service';
+import { DataService } from '../../services/data/data.service';
+import { TransformService } from '../../services/transform/transform.service';
 import { map } from 'rxjs/operators/map';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-devicedetails',
+  templateUrl: './devicedetails.component.html',
+  styleUrls: ['./devicedetails.component.css']
 })
-export class AppComponent implements OnInit {
-  //public data: object;
+export class DevicedetailsComponent implements OnInit {
 
-  /*data: any = [];
+    //public data: object;
+
+  data: any = [];
 
   constructor(public dataService: DataService, public transformService: TransformService) {
     /*this.dataService.getSystemXml()
@@ -20,7 +21,7 @@ export class AppComponent implements OnInit {
         console.log(this.data);
       })*/
 
-    /*this.dataService.getSystemXml()
+    this.dataService.getSystemXml()
       .pipe(
       map((res: string) => 
         this.transformService.convertToJson(res)
@@ -30,9 +31,9 @@ export class AppComponent implements OnInit {
         console.log(this.data);
       })
 
-  }*/
+  }
 
   ngOnInit() {
-
   }
+
 }

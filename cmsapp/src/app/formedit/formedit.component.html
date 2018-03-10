@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="text-center">Set Device Name</h1>
+  <div class="row" *ngFor="let value of data">
+    <form>
+      <div class="form-group">
+        <label for="ip">IP Address</label>
+        <input type="text" class="form-control" id="ip" [(ngModel)]="value.system_cfg.net.ip.addr" name="ip">
+      </div>
+      <div class="form-group">
+        <label for="name">Vibguard Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="value.system_cfg.sysname" name="name">
+      </div>
+      <button type="submit" class="btn btn-success" (click)="save()">Save Name</button>
+    </form>
+  </div>
+</div>

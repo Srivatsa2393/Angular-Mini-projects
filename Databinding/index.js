@@ -8,18 +8,21 @@ const Data = require('./models/Data');
 const app = express();
 
 var data = [
-    {ip: '172.17.73.19', name: 'My test vibguard'}
-];
+    {ip: '172.17.73.19', name: 'My test vibguard'},
+]; 
+
+/* var data = new Data(); */
 
 app.use(cors());
 
 app.use(bodyParser.json());
 
 app.get('/data', (req, res) => {
+    //var data = new Data();
     res.send(data);
 })
 
-app.post('/data', (req, res) => {
+/* app.post('/data', (req, res) => {
     console.log(req.body);
     var vibguardData = req.body;
 
@@ -29,6 +32,18 @@ app.post('/data', (req, res) => {
             console.log('Saving data error');
         }else{
             res.sendStatus(200);
+        }
+    })
+}) */
+
+app.post('/data', (req, res) => {
+    var newData = req.params.data;
+    newData.save((err, result) => {
+        if(err) {
+            console.log('Saving data error');
+        }else{
+            res.sendDate(200);
+            console.log(data);
         }
     })
 })

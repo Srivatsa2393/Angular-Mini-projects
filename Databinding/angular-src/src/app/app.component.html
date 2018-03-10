@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div class="container">
+  <div class="jumbotron" *ngFor="let message of appService.messages">
+    <div><span>IP Address - {{message.ip}}</span></div>
+    <div><span>NAME - {{message.name}}</span></div>
+  </div>
+<!--   <div class="jumbotron">
+    <span> IP Address - {{appService.messages.ip}}</span>
+    <span> Name - {{appService.messages.name}}</span>
+  </div> -->
+<!-- </div> -->
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let value of data">
+        IP Address - <span>{{value.ip}}</span>
+        Name - <span>{{value.name}}</span>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row" *ngFor="let value of data">
+    <form class="form-group">
+      <input type="text" placeholder="IP Address" class="form-control" [(ngModel)]="value.ip" name="ip" />
+      <input type="text" placeholder="Name" class="form-control" [(ngModel)]="value.name" name="name" />
+
+      <button class="btn btn-success" (click)="save()">Save Config</button>
+    </form> 
+  </div>
+</div>

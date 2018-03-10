@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="true"?>
+
+<email_cfg target="vibguard" version="1.0" xmlns="http://www.pruftechnik.com/cm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+<mail>
+
+
+<account auth="none" port="25" srv="" type="smtp" id="2">
+
+<user>user</user>
+
+<pwd>pwd</pwd>
+
+<max_mail_size>10485760</max_mail_size>
+
+</account>
+
+<sender addr="mail@VIBGUARD.com" name="VIBGUARD"/>
+
+</mail>
+
+</email_cfg>
