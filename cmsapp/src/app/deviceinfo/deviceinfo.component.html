@@ -14,27 +14,22 @@
         <a [routerLink]="['/email']">Modbus Info</a>
       </li>
       <li routerLinkActive="active">
-        <a [routerLink]="['/']">Device Details</a>
+        <a [routerLink]="['/email']">Device Details</a>
       </li>
     </ul>
   </div>
 </nav>
+ 
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <span class="glyphicon glyphicon-home"></span>
+      <span style="padding:20px;">{{ datas== undefined ? "" : datas.system_cfg.sysname }}</span>
+      <span>{{ datas== undefined ? "": datas.system_cfg.net.ip.addr }}</span>
+    </div>
+  </div>
+</div>
 
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <td>Channel</td>
-      <td>Sensor</td>
-      <td>Sensitivity</td>
-      <td>Value</td>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td *ngFor="let data of channel">
-        {{ channel == undefined ? "" : channel.measure_cfg.channel}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div *ngFor="let datas of data.measure_cfg.sensor">
+  {{datas}}
+</div>

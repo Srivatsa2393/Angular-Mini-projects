@@ -10,7 +10,8 @@ import { map } from 'rxjs/operators/map';
 })
 export class DeviceinfoComponent implements OnInit {
 
-  data:any = [];
+  public data:any = [];
+  public datas:any = [];
 
   constructor(private dataService: DataService, public transformService: TransformService) {
 
@@ -23,6 +24,16 @@ export class DeviceinfoComponent implements OnInit {
         this.data = res;
         //this.data.push(res);
         console.log(this.data);
+      })
+
+      this.dataService.getSystemXml()
+      .pipe(
+      map((res: string) => 
+        this.transformService.convertToJson(res)
+      )
+      ).subscribe((res: Object) => {
+        this.datas = res;
+        console.log(this.datas);
       })
    }
 
