@@ -24,6 +24,13 @@ export class DeviceinfoComponent implements OnInit {
         this.data = res;
         //this.data.push(res);
         console.log(this.data);
+
+        /* let loopingData = Object.keys(this.data);
+        let result = [];
+        for(var value of loopingData){
+          result.push(loopingData[value])
+        }
+        console.log(result); */
       })
 
       this.dataService.getSystemXml()

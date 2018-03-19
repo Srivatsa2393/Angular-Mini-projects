@@ -13,6 +13,7 @@ import { FormeditComponent } from './formedit/formedit.component';
 import { DevicedetailsComponent } from './devicedetails/devicedetails.component';
 import { DeviceinfoComponent } from './deviceinfo/deviceinfo.component';
 import { ModbusComponent } from './modbus/modbus.component';
+import { ObjectPipe } from './object.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: FormeditComponent },
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     FormeditComponent,
     DevicedetailsComponent,
     DeviceinfoComponent,
-    ModbusComponent
+    ModbusComponent,
+    ObjectPipe
   ],
   imports: [
     BrowserModule,

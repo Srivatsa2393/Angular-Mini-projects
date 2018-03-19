@@ -43,7 +43,12 @@ export class FormeditComponent implements OnInit {
       })
   } */
 
-  save() {
+/*   save() {
+    this.router.navigate(['/device']);
+  } */
+
+  onSave(form) {
+    console.log(form);
     this.router.navigate(['/device']);
   }
 
