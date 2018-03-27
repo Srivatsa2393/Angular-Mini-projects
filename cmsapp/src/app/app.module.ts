@@ -14,6 +14,7 @@ import { DevicedetailsComponent } from './devicedetails/devicedetails.component'
 import { DeviceinfoComponent } from './deviceinfo/deviceinfo.component';
 import { ModbusComponent } from './modbus/modbus.component';
 import { ObjectPipe } from './object.pipe';
+import { ValueService } from '../services/value/value.service';
 
 const appRoutes: Routes = [
   { path: '', component: FormeditComponent },
@@ -39,7 +40,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [TransformService, DataService],
+  providers: [TransformService, DataService, ValueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,7 +4,7 @@ import * as xml2js from 'xml2js';
 
 @Injectable()
 export class TransformService{
-
+    private buildObject = new xml2js.Builder();
     public convertToJson(data:string): any {
         let res;
         // setting the explicitArray option prevents an array structure
@@ -20,8 +20,9 @@ export class TransformService{
         });
         return res;
     }
+    
 
     public convertToXml(rootObject: Object) {
-        return new xml2js.Builder().buildObject(rootObject);
+        return  this.buildObject.buildObject(rootObject);
     }
 }
