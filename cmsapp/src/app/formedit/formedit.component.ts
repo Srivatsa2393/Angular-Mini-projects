@@ -76,7 +76,7 @@ export class FormeditComponent implements OnInit {
 
   //constructor(public dataService: DataService, public transformService: TransformService, public router: Router) { }
 
-  constructor(public valueService: ValueService) {}
+  constructor(public valueService: ValueService, public router: Router) {}
 
   public data: any = [];
 
@@ -125,5 +125,10 @@ export class FormeditComponent implements OnInit {
     //this.dataService.saveSystemXml(form.value)
     //this.router.navigate(['/device']);
   }*/
+
+  onSave(form){
+    console.log(form);
+    this.router.navigate(['/device']);
+  }
 
 }

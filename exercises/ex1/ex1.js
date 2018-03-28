@@ -12,10 +12,10 @@
 		var f = F;
 	}
 
-	var A = function() {
+	function A() {
 		console.log("A");
 		B();
-	};
+	}
 
 	var C;
 
@@ -42,12 +42,12 @@
 		J();
 	}
 
-	B = function() {
+	function B() {
 		console.log("B");
 		C();
-	};
+	}
 
-	var F = function() {
+	var F = function F() {
 		console.log("F");
 		G();
 	};
@@ -72,10 +72,10 @@
 		};
 	};
 
-	C = function() {
+	function C() {
 		console.log("C");
 		D();
-	};
+	}
 
 })
 

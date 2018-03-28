@@ -18,4 +18,14 @@ export class ValueService {
                 })
             )
     }
+
+
+    getEmailXmlData() {
+        return this.dataService.getEmailXml()
+            .pipe(
+                map((res) => {
+                    return this.transformService.convertToJson(res);
+                })
+            )
+    }
 }
